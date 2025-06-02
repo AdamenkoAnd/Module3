@@ -4,25 +4,30 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse('главная страница магазина')
+    context = {
+    "user_id": 12345,
+    "username": "example_user",
+    "theme": "dark"
+    }
+    return render(request, 'index.html', context)
 
 def about(request):
-    return HttpResponse('информация о компании')
+    return render(request, 'about.html')
 
 def contact(request):
-    return HttpResponse('форма или контакты')
+    return render(request, 'contact.html')
 
 def product_list(request):
-    return HttpResponse('список товаров')
+    return render(request, 'products.html')
 
 def product_detail(request, pk):
-    return HttpResponse('подробности о конкретном товаре')
+    return render(request, 'product_detail.html')
 
 def login_view(request):
-    return HttpResponse('форма входа')
+    return render(request, 'login.html')
 
 def register_view(request):
-    return HttpResponse('форма регистрации')
+    return render(request, 'register.html')
 
 def logout_view(request):
     return HttpResponse('выход пользователя')

@@ -1,0 +1,11 @@
+
+<nav>
+    <a href="{% url 'index_page'%}">На главную страницу</a>
+    <a href="{% url 'about_page'%}"> Информация о компании</a>
+    <a href="{% url 'contact_page'%}">Форма или контакты</a>
+    <a href="{% url 'product_list_page'%}">Список товаров</a>
+    <a href="{%url 'product_detail_page' pk='1'%}">Подробности о конкретном товаре</a>
+    <a href="{% url 'login_view_page'%}">Форма входа</a>
+    <a href="{% url 'register_view_page'%}">Форма регистрации</a>
+    <a href="{%url 'logout_view_page'%}">Выход пользователя</a>
+</nav>
