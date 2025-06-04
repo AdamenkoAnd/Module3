@@ -1,4 +1,20 @@
 {% extends "shop/base.html" %}
 {% block content %}
-<h1>QQWERRTYYUIIOP</h1>
+<h1>Контакты</h1>
+<div class="contact_page">
+    <h2>Свяжитесь с нами</h2>
+    <p>Email: {{ email }}</p>
+    <p>Телефон: {{ phone }}</p>
+    <p>Адрес: г.Прага, ул. Пражская, д. 123</p>
+    <p>График работы: Пн–Пт: 9:00–18:00, Сб–Вс: 10:00–16:00</p>
+</div>
+<style>
+    .contact_page {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        color: blue;
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
 {% endblock %}

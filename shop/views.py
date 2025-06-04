@@ -5,20 +5,29 @@ from django.http import HttpResponse
 
 def index(request):
     context = {
-    "user_id": 12345,
-    "username": "example_user",
-    "theme": "dark"
+        "welcome_message": "Добро пожаловать в PhoneShop!",
     }
     return render(request, 'index.html', context)
 
 def about(request):
-    return render(request, 'about.html')
+    context = {
+        "company_name": "PhoneShop",
+        "year_founded": 2025,
+    }
+    return render(request, 'about.html', context)
 
 def contact(request):
-    return render(request, 'contact.html')
+    context = {
+        "email": "Phohe@gmail.com",
+        "phone": "+420 000 000 000",
+    }
+    return render(request, 'contact.html', context)
 
 def product_list(request):
-    return render(request, 'products.html')
+    context = {
+    "phones": 'phones',
+    }
+    return render(request, 'products.html', context)
 
 def product_detail(request, pk):
     return render(request, 'product_detail.html')
